@@ -1,0 +1,1050 @@
+haftanýn günleri, dizi örneði
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Deðiþken Tanýmlamasý:
+            string[] haftagun = new string[7];
+
+
+            for (int i = 0; i<=6; i++)
+            {
+                Console.WriteLine("{0}. günü giriniz: ", i+1);
+                haftagun[i] = Console.ReadLine();
+                
+            }
+
+            for (int i = 0; i <= 6; i++)
+            {
+                Console.WriteLine("{0}. girdiðiniz gün = {1}", i+1, haftagun[i]);
+
+            }
+            Console.ReadKey();
+
+        }
+     }
+}
+
+
+---------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] Amatrisi = new int[2, 2];
+            int[,] Bmatrisi = new int[2, 2];
+            int[,] Cmatrisi = new int[2, 2]; 
+
+
+            // Diziye Eleman Ekleme Ýþlemi:
+            Amatrisi[0, 0] = 7;
+            Amatrisi[0, 1] = 20;
+            Amatrisi[1, 0] = 10;
+            Amatrisi[1, 1] = 62;
+
+            // Diziye Eleman Ekleme Ýþlemi:
+            Bmatrisi[0, 0] = 23;
+            Bmatrisi[0, 1] = 51;
+            Bmatrisi[1, 0] = 84;
+            Bmatrisi[1, 1] = 9;
+
+            // Diziye Eleman Ekleme Ýþlemi:
+            Cmatrisi[0, 0] = Amatrisi[0,0] + Bmatrisi[0,0];
+            Cmatrisi[0, 1] = Amatrisi[0,1] + Bmatrisi[0,1];
+            Cmatrisi[1, 0] = Amatrisi[1,0] + Bmatrisi[1,0];
+            Cmatrisi[1, 1] = Amatrisi[1,1] + Bmatrisi[1,1];
+
+
+            //Eklenen Elemanlarý Yazdýrma
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int k = 0; k <= 1; k++)
+                {
+                    Console.WriteLine("-[{0},{1}] eleman: {2}\t", i, k, Cmatrisi[i, k]);
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadKey();
+        }
+     }
+}
+
+--------------------------------------
+for döngüsü ile kullanýcýdan sayý alýp matris toplama
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] Amatrisi = new int[2, 2];
+            int[,] Bmatrisi = new int[2, 2];
+            int[,] Cmatrisi = new int[2, 2]; 
+
+
+            // Diziye Eleman Ekleme Ýþlemi:
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int k = 0; k<=1; k++)
+                {
+                    Console.WriteLine("A matrisinin {0}x{1} elemanýný giriniz:", i, k);
+                    Amatrisi[i, k] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            // Diziye Eleman Ekleme Ýþlemi:
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int k = 0; k <= 1; k++)
+                {
+                    Console.WriteLine("B matrisinin {0}x{1} elemanýný giriniz:", i,k);
+                    Bmatrisi[i, k] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            // Matrisleri toplama
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int k = 0; k <= 1; k++)
+                {
+                    Cmatrisi[i, k] = Amatrisi[i, k] + Bmatrisi[i, k];
+                }
+            }
+
+
+            //Eklenen Elemanlarý Yazdýrma
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int k = 0; k <= 1; k++)
+                {
+                    Console.WriteLine("-[{0},{1}] eleman: {2}\t", i, k, Cmatrisi[i, k]);
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadKey();
+        }
+     }
+}
+---------------------------------------------------------------------
+static void Main(string[] args)
+        {
+            int x, y;
+            Random z = new Random();
+            x = z.Next(1, 100);
+            for (int i = 1; i < 100; i++)
+            {
+                Console.WriteLine("sayý giþriniz");
+                y = Convert.ToInt32(Console.ReadLine());
+                if (y == x)
+                {
+                    Console.WriteLine("doðru sayý bulundu"+x);
+                }
+                else if(y>x)
+                {
+                    Console.WriteLine("daha küçük bir sayý giriniz");
+                }
+                else
+                {
+                    Console.WriteLine("daha küçük sayý giriniz");
+                }
+
+            }
+            Console.ReadLine();
+        }
+    }
+
+-----------------------------------------------------------------------
+ // Deðiþken Tanýmlamasý:
+                string[] aylar = new string[12];
+
+
+                for (int i = 0; i < 12; i++)
+                {
+                    Console.WriteLine("{0}.ayý giriniz.", i + 1);
+                    aylar[i] = Console.ReadLine();
+
+                }
+
+                for (int i = 0; i < 12; i++)
+                {
+                    Console.WriteLine("{0}.ay ={1}", i + 1, aylar[i]);
+
+
+                }
+
+
+                Console.ReadKey();
+------------------------------------------------------------------------------------------------------------
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+             int[,] amatrisi = new int [2,2];
+             int[,] bmatrisi = new int [2,2];
+             int[,] cmatrisi = new int[2,2];
+
+             for (int i = 0; i<=1 ; i++)
+
+             {
+                 for(int  j= 0; j<=1 ; j++)
+                 {
+                     Console.WriteLine("A matrisinin {0}x{1} elamýný giriniz", i, j);
+                     amatrisi[i, j] = Convert.ToInt16(Console.ReadLine());
+
+                 }
+             }
+
+             for (int i = 0; i <= 1; i++)
+             {
+                 for (int j = 0; j <= 1; j++)
+                 {
+                     Console.WriteLine("B matrisinin {0}x{1} elamýný giriniz", i, j);
+                     bmatrisi[i, j] = Convert.ToInt16(Console.ReadLine());
+
+                 }
+             }
+
+             for (int i = 0; i <= 1; i++)
+             {
+                 for (int j = 0; j <= 1; j++)
+                 {
+                     cmatrisi[i, j] = amatrisi[i, j] - bmatrisi[i, j];
+                     Console.WriteLine("sonuç matrisinin {0}x{1} elamýný={2} ",i,j,cmatrisi[i,j]);
+                     
+                 }
+             }
+             Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+-------------------------
+
+goto ÖRNEÐÝ**
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int INOT = 0;
+            int ISAYI = 0;
+
+            basadon:
+            Console.WriteLine("Not Giriniz");
+            int ONOT = Convert.ToInt32(Console.ReadLine());
+
+            INOT = INOT + ONOT;
+
+            ISAYI = ISAYI + 1;
+
+            if (ISAYI == 3) {
+                int NORT = (INOT/3);
+                Console.WriteLine(NORT);
+            }
+            else {
+                goto basadon;
+            }
+
+
+        }
+    }
+}
+
+
+-----------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int toplam, sayi, sayac;
+            toplam = 0;
+            sayi = 0;
+            sayac = 0;
+            uydurdum:
+            Console.WriteLine("bir sayý giriniz");
+            sayi = Convert.ToInt32(Console.ReadLine());
+            toplam = toplam + sayi;
+            sayac = sayac + 1;
+
+            if (sayac<3)
+            {
+                goto uydurdum;
+            }
+            Console.WriteLine(toplam);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+
+
+-----------------------
+
+While Örneði *****
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int toplam, sayi, sayac;
+            toplam = 0;
+            sayi = 0;
+            sayac = 0;
+
+            while (sayac < 3)
+            {
+            Console.WriteLine("bir sayý giriniz");
+            sayi = Convert.ToInt32(Console.ReadLine());
+            toplam = toplam + sayi;
+            sayac = sayac + 1;
+            }
+            Console.WriteLine(toplam);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+
+----------------
+
+For Döngüsü Örneði**
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int toplam, sayi, sayac;
+            toplam = 0;
+            sayi = 0;
+
+            for (sayac = 0; sayac < 3; sayac++)
+            {
+                Console.WriteLine("bir sayý giriniz");
+                sayi = Convert.ToInt32(Console.ReadLine());
+                toplam = toplam + sayi;
+            }
+            Console.WriteLine(toplam);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int toplam, sayi, sayac;
+            toplam = 0;
+            sayi = 0;
+            sayac = 0;
+
+
+            do
+            {
+                Console.WriteLine("bir sayý giriniz");
+                sayi = Convert.ToInt32(Console.ReadLine());
+                toplam = toplam + sayi;
+                sayac = sayac + 1;
+            } while (sayac < 3);
+
+            Console.WriteLine(toplam);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1.sayýyý gir");
+            int sayi1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("2.sayýyý gir");
+            int sayi2 = int.Parse(Console.ReadLine());
+            if (sayi1>sayi2)
+            {
+                Console.WriteLine("1.sayý büyüktür");
+            }
+            else if (sayi1 < sayi2)
+            {
+                Console.WriteLine("2.sayý büyüktür");
+            }
+            else
+            {
+                Console.WriteLine("sayýlar eþit");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+--------------------------------------
+Yanlýzca Ýf else kullanarak Girilen 3 Sayýyý Büyükten Küçüðe Sýralayan Program
+
+
+int x = 0;
+            int y = 0;
+            int z = 0;
+
+            Console.WriteLine("Birinci Sayýyý Giriniz");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ýkinci Sayýyý Giriniz");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Üçüncü Sayýyý Giriniz");
+            z = Convert.ToInt32(Console.ReadLine());
+
+            if (x == y && x == z)
+            {
+                Console.WriteLine("Tüm Sayýlar Eþit " + x);
+            }
+
+            else if (x > y && y == z)
+            {
+                Console.WriteLine("En Büyük Sayý " + x);
+                Console.WriteLine("Ýkinci ve üçüncü sayý eþit " + y);
+            }
+
+            else if (y > x && x == z)
+            {
+                Console.WriteLine("En Büyük Sayý " + y);
+                Console.WriteLine("Ýkinci ve üçüncü sayý eþit " + x);
+            }
+
+            else if (z > x && x == y)
+            {
+                Console.WriteLine("En Büyük Sayý " + z);
+                Console.WriteLine("Ýkinci ve üçüncü sayý eþit " + y);
+            }
+
+            else if (x < y && y == z)
+            {
+                Console.WriteLine("Birinci ve Ýkinci sayý eþit " + y);
+                Console.WriteLine("En Küçük Sayý " + x);
+            }
+
+            else if (y < x && x == z)
+            {
+                Console.WriteLine("Birinci ve Ýkinci sayý eþit " + x);
+                Console.WriteLine("En Küçük Sayý " + y);
+            }
+
+            else if (z > x && x == y)
+            {
+                Console.WriteLine("Birinci ve Ýkinci sayý eþit " + y);
+                Console.WriteLine("En Küçük Sayý " + z);
+            }
+
+            else if (x > y && x > z)
+            {
+                if (y > z)
+                {
+                    Console.WriteLine("En Büyük Sayý " + x);
+                    Console.WriteLine("En Ýkinci Sayý " + y);
+                    Console.WriteLine("En Küçük Sayý " + z);
+                }
+                else
+                {
+                    Console.WriteLine("En Büyük Sayý " + x);
+                    Console.WriteLine("En Ýkinci Sayý " + z);
+                    Console.WriteLine("En Küçük Sayý " + y);
+                }
+            }
+
+            else if (y > x && y > z)
+            {
+                if (x > z)
+                {
+                    Console.WriteLine("En Büyük Sayý " + y);
+                    Console.WriteLine("En Ýkinci Sayý " + x);
+                    Console.WriteLine("En Küçük Sayý " + z);
+                }
+                else
+                {
+                    Console.WriteLine("En Büyük Sayý " + y);
+                    Console.WriteLine("En Ýkinci Sayý " + z);
+                    Console.WriteLine("En Küçük Sayý " + x);
+                }
+            }
+
+            else if (z > x && z > y)
+            {
+                if (x > y)
+                {
+                    Console.WriteLine("En Büyük Sayý " + z);
+                    Console.WriteLine("En Ýkinci Sayý " + x);
+                    Console.WriteLine("En Küçük Sayý " + y);
+                }
+                else
+                {
+                    Console.WriteLine("En Büyük Sayý " + z);
+                    Console.WriteLine("En Ýkinci Sayý " + y);
+                    Console.WriteLine("En Küçük Sayý " + x);
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Hata!");
+            }
+
+            Console.ReadKey();
+
+**********************************************
+int sayi1, sayi2, sayi3, enbuyuk;
+
+            Console.WriteLine("1. sayýyý giriniz:");
+            sayi1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("2. sayýyý giriniz:");
+            sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("3. sayýyý giriniz:");
+            sayi3 = Convert.ToInt32(Console.ReadLine());
+
+
+            if (sayi1 > sayi2 && sayi1 > sayi3)
+            {
+                enbuyuk = sayi1;
+                Console.WriteLine("en büyük sayý :"+enbuyuk);
+            }
+
+            else if (sayi2 > sayi1 && sayi2 > sayi3)
+            {
+                enbuyuk = sayi2;
+                Console.WriteLine("en büyük sayý :" + enbuyuk);
+            }
+
+            else
+            {
+                enbuyuk = sayi3;
+                Console.WriteLine("en büyük sayý: "+enbuyuk);
+            }
+
+            Console.ReadLine();
+
+*******************************************************
+static void Main(string[] args)
+        {
+            int[] sayi = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write((i + 1) + ".Sayýyý Gir: ");
+                sayi[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            int enbuyuk;
+            enbuyuk = sayi[0];
+
+            for (int i = 1; i < 3; i++)
+            {
+                if (enbuyuk < sayi[i])
+                {
+                    enbuyuk = sayi[i];
+                }
+            }
+            Console.WriteLine("En büyük sayý:" + enbuyuk);
+            Console.ReadKey();
+************************************************************
+int[] sayilar = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("{0}.sayýyý giriniz:",i+1);
+                sayilar[i]=Convert.ToInt32(Console.ReadLine());
+            }
+            Array.Sort(sayilar);
+            for (int i = 0; i < 10; i++)
+            {
+                if (i < 9)
+                {
+                    Console.Write(sayilar[i] + "<");
+                }
+                else
+                {
+                    Console.Write(sayilar[i]);
+                }
+            }
+            Console.ReadLine();
+
+
+
+------------------------------------------------------------
+ int[] numara = new int[3];
+            for (int i =0;i<3; i++)
+
+            {
+                Console.WriteLine("sayý giriniz");
+                numara[i]=Convert.ToInt32(Console.ReadLine());
+            }
+            int maxnumara = numara[0];
+            for (int i =1; i<3; i++)
+            {
+                if (numara[i]>maxnumara)
+                {
+                    maxnumara = numara[i];
+                }
+
+            }
+            Console.WriteLine("girilen sayýlarýn en büyüðü :"+maxnumara);
+            Console.ReadKey();
+        
+
+büyükten küçüge sýralama
+
+ Console.WriteLine("Kaç sayý gireceksiniz: ");
+            int n  = Convert.ToInt32(Console.ReadLine());
+
+            int[] sayilar = new int[n];
+
+            for(int i =0; i<n; i++){
+                Console.WriteLine("Sayý giriniz: ");
+                sayilar[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            
+            for(int i=0; i<n-1;i++)
+            {
+                for(int j = 0; j< n-i-1; j++)
+                {
+                    if (sayilar[j]<sayilar[j+1])
+                    {
+                        int temp = sayilar[j];
+                        sayilar[j] = sayilar[j+1];
+                        sayilar[j+1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Sýralama: ");
+            for (int i=0; i<n; i++)
+            {
+                Console.WriteLine(sayilar[i]);
+            }
+            Console.ReadLine();
+
+
+--------------------------------
+
+switch case ile hesap makinesi
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1. sayýyý giriniz: ");
+            float sayi1 = System.Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("2. sayýyý giriniz: ");
+            float sayi2 = System.Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Yapmak istediðiniz iþlemi seçiniz:\n" +
+                "1: Toplama\n" +
+                "2: Çýkarma\n" +
+                "3: Çarpma\n" +
+                "4: Bölme\n");
+
+            string islem = Console.ReadLine();
+
+            switch (islem)
+            {
+                case "1":
+                    Console.WriteLine("Toplama iþlemini seçtiniz.");
+                    Console.WriteLine("Cevap: " + Convert.ToString(sayi1 + sayi2));
+                    Console.ReadKey();
+                    break;
+                
+                case "2":
+                    Console.WriteLine("Çýkarma iþlemini seçtiniz.");
+                    Console.WriteLine("Cevap: " + Convert.ToString(sayi1 - sayi2));
+                    Console.ReadKey();
+                    break;
+                
+                case "3":
+                    Console.WriteLine("Çarpma iþlemini seçtiniz.");
+                    Console.WriteLine("Cevap: " + Convert.ToString(sayi1 * sayi2));
+                    Console.ReadKey();
+                    break;
+                
+                case "4":
+                    Console.WriteLine("Bölme iþlemini seçtiniz.");
+                    Console.WriteLine("Cevap: " + Convert.ToString(sayi1 / sayi2));
+                    Console.ReadKey();
+                    break;
+                
+                default:
+                    Console.WriteLine("Yanlýþ iþlem girdiniz.");
+                    break;
+            }
+        }
+    }
+}
+
+
+------------------------------------------
+istenilen þeklin alanýný ve çevresini hesaplama
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hesaplamak istediðiniz alaný seçiniz:\n" +
+                "1: Kare\n" +
+                "2: Dikdörtgen\n" +
+                "3: Daire\n" +
+                "4: Üçgen\n");
+
+            string islem = Console.ReadLine();
+
+            switch (islem)
+            {
+                case "1":
+                    Console.WriteLine("Karenin alanýný seçtiniz.");
+                    
+                    Console.WriteLine("Bir kenarýn uzunluðunu gir: ");
+                    float uzunluk1 = System.Convert.ToInt32(Console.ReadLine());
+                    
+                    float kareAlan = uzunluk1 * uzunluk1;
+                    float kareCevre = 2 * (uzunluk1 + uzunluk1);
+
+                    Console.WriteLine("Karenin alaný: " + System.Convert.ToString(kareAlan));
+                    Console.WriteLine("Karenin çevresi: " + System.Convert.ToString(kareCevre));
+
+                    Console.ReadKey();
+                    break;
+                
+                case "2":
+                    Console.WriteLine("Dikdörtgenin alanýný seçtiniz.");
+                    
+                    Console.WriteLine("1. Kenarýn uzunluðunu gir: ");
+                    float uzunluk2 = System.Convert.ToInt32(Console.ReadLine());
+                    
+                    Console.WriteLine("2. Kenarýn uzunluðunu gir: ");
+                    float uzunluk3 = System.Convert.ToInt32(Console.ReadLine());
+                    
+                    float dikAlan = uzunluk2 * uzunluk3;
+                    float dikCevre = 2 * (uzunluk2 + uzunluk3);
+
+                    Console.WriteLine("Dikdörtgenin alaný: " + System.Convert.ToString(dikAlan));
+                    Console.WriteLine("Dikdörtgenin çevresi: " + System.Convert.ToString(dikCevre));
+
+                    Console.ReadKey();
+                    break;
+                
+                case "3":
+                    Console.WriteLine("Dairenin alanýný seçtiniz.");
+                    
+                    Console.WriteLine("Yarýçapýn uzunluðunu gir: ");
+                    float yaricap = System.Convert.ToInt32(Console.ReadLine());
+                    
+                    float daireAlan = 3 * (yaricap * yaricap);
+                    float daireCevre = 2 * 3 * yaricap;
+
+
+                    Console.WriteLine("Dairenin alaný: " + System.Convert.ToString(daireAlan));
+                    Console.WriteLine("Dairenin çevresi: " + System.Convert.ToString(daireCevre));
+
+                    Console.ReadKey();
+                    break;
+                
+                case "4":
+                    Console.WriteLine("Üçgenin alanýný seçtiniz.");
+
+                    Console.WriteLine("Taban kenarýn uzunluðunu gir: ");
+                    float taban = System.Convert.ToInt32(Console.ReadLine());
+                    
+                    Console.WriteLine("Yüksekliðin uzunluðunu gir: ");
+                    float yukseklik = System.Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Diðer kenarýn uzunluðunu gir: ");
+                    float uzunluk4 = System.Convert.ToInt32(Console.ReadLine());
+
+                    float ucgenAlan = (taban * yukseklik) / 2;
+                    float ucgenCevre = taban + yukseklik + uzunluk4;
+
+                    Console.WriteLine("Üçgenin alaný: " + System.Convert.ToString(ucgenAlan));
+                    Console.WriteLine("Üçgenin çevresi: " + System.Convert.ToString(ucgenCevre));
+                    
+                    Console.ReadKey();
+                    break;
+                
+                default:
+                    Console.WriteLine("Yanlýþ iþlem girdiniz.");
+                    break;
+            }
+        }
+    }
+}
+
+*****************************************************
+//Büyükten küçüðe sayýlarý sýrala
+int[] sayilar = new int[5];
+            int bos;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Sayý Gir:");
+                sayilar[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (sayilar[j] < sayilar[i])
+                    {
+                        bos = sayilar[i];
+                        sayilar[i] = sayilar[j];
+                        sayilar[j] = bos;
+                    }
+                }
+            }
+            foreach (int i in sayilar)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadKey();
+
+***********************************************
+
+//matris çarpýmý
+
+int[,] amatris = new int[2, 3];// 2 boyutlu diziler ile matrislerin tanýmlanmasý
+            int[,] bmatris = new int[3, 2];//amatrisi mxn ise çarpýlmasý için b matrisi nxm olmalýdýr
+            int[,] cmatris = new int[2, 2];// sonuç matrisi ise nxn olmak zorundadýr
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j <3; j++)
+                {
+                    //a matrisinin elemanlarý girilmiþtir
+                    Console.WriteLine("Lütfen A matrisinin{0}.satýr {1}.sütun elemanýný giriniz:",i+1,j+1);
+                    amatris[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    //b matrisinin elemanlarý girilmiþtir
+                    Console.WriteLine("Lütfen B matrisinin{0}.satýr {1}.sütun elemanýný giriniz:", i + 1, j + 1);
+                    bmatris[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                for (int k = 0; k < 2; k++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        //a matrisinin satýrý ile b matrisinin sütunu çarpýlmýþtýr c matrisinin satýrý oluþmuþtur
+                        cmatris[i, k] += amatris[i, j] * bmatris[j, k];  
+                    }   
+                }
+            }
+            Console.WriteLine("A Matrisi");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int k = 0; k < 3; k++)
+                {
+                    Console.WriteLine(amatris[i, k]);
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("B Matrisi");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int k = 0; k < 2; k++)
+                {
+                    Console.WriteLine(bmatris[i, k]);
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("C Matrisi");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int k = 0; k <2; k++)
+                {
+                    //sonuç(cmatrisi) ekrana yazdýrýlmýþtýr
+                    Console.WriteLine(cmatris[i,k]);
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+
+*************************************************************************
+//Gün sayýsý girip hangi güne karþýlýk geldiðini göster
+            Console.Write("Haftanýn kaçýncý günündeyiz?: ");
+            string gunsayisi = Console.ReadLine();
+
+            switch (gunsayisi)
+            {
+                case "1":
+                    Console.WriteLine("Pazartesi");
+                    break;
+                case "2":
+                    Console.WriteLine("Salý");
+                    break;
+                case "3":
+                    Console.WriteLine("Çarþamba");
+                    break;
+                case "4":
+                    Console.WriteLine("Perþembe");
+                    break;
+                case "5":
+                    Console.WriteLine("Cuma");
+                    break;
+                case "6":
+                    Console.WriteLine("Cumartesi");
+                    break;
+                case "7":
+                    Console.WriteLine("Pazar");
+                    break;
+                default:
+                    Console.WriteLine("LÜTFEN 1'DEN 7'YE KADAR DEÐER GÝR!");
+                    break;
+            } Console.ReadKey();
+*****************************************************************************
+//Gün sayýsý girip hangi güne karþýlýk geldiðini göster
+            Console.Write("Ne Hesaplayacaðýz?(kare/dikdörtgen/daire): ");
+            string sekil = Console.ReadLine();
+
+
+            switch (sekil)
+            {
+                case "kare":
+                    Console.Write("Bir kenar uzunluðu: ");
+                    int kenar = Convert.ToInt16(Console.ReadLine());
+                    int karealan = kenar * kenar;
+                    Console.Write("Alan: " + karealan);
+                    break;
+                case "dikdörtgen":
+                    Console.Write("Kýsa kenar: ");
+                    int kisakenar = Convert.ToInt16(Console.ReadLine());
+                    Console.Write("Uzun kenar: ");
+                    int uzunkenar = Convert.ToInt16(Console.ReadLine());
+                    int dikalan = kisakenar * uzunkenar;
+                    Console.Write("Alan: " + dikalan);
+                    break;
+                case "daire":
+                    Console.Write("Yarý çap: ");
+                    int cap = Convert.ToInt16(Console.ReadLine());
+                    int dairealan= (cap*cap)*3;
+                    Console.Write("Alan: " + dairealan);
+                    break;
+                default:
+                    Console.WriteLine("Hatalý Giriþ");
+                    break;
+            } Console.ReadKey();
